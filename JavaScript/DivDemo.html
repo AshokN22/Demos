@@ -1,0 +1,25 @@
+<Html>
+	<Head><Title>First Javascript Demo</Title>
+		<script>
+			function GetDataInDiv(){
+				var status = confirm("Do you want close windows")
+				if(status){
+					window.close();
+				}
+
+			}
+
+			function GetName(){
+				var name = prompt("Enter Your Name : ","Your Name");
+				if(name != null){
+					alert(name);
+				}			}
+		</script>
+	</Head>
+	<Body>
+		<div id="data" name="data">OK</div>
+
+		<input type="button" value="Close" onclick="GetDataInDiv();">
+		<input type="button" value="Your Name" onclick="GetName();">
+	</Body>
+</Html>

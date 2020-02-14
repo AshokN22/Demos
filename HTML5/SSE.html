@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Figure Demo</title>
+		<script>
+			if(typeof(EventSource) !== undefined){
+				var src = new EventSource("http://localhost/Demo/Demo_SSE.asp");
+				src.onmessage = function(event){
+					document.getElementById("inrDiv").innerHTML=event.data+"<br>";
+				}
+			}
+			else{
+				alert("No Server Events");
+			}
+		</script>
+	</head>
+	<body>
+		<form method="POST" action="Demo.asp">
+			<div id="inrDiv"></div>
+			<input type="submit" value="Click" id="btn">
+		</form>
+	</body>
+</html>

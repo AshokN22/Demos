@@ -1,0 +1,60 @@
+<Html>
+	<Head><Title>Form Element</Title>
+		<script src = "Data.js">
+			
+		</script>
+	</Head>
+	<Body><center><br><br>
+		<h1>Student Information</h1>
+		<form name="stfrm" action="">
+		<table cellspacing=10>
+			<TR>
+				<TD>Roll No. : </TD>
+				<TD><input type="text" name="roll"></TD>
+			</TR>
+			<TR>
+				<TD>Name : </TD>
+				<TD><input type="text" name="name"></TD>
+			</TR>
+			<TR>
+				<TD>Gender: </TD>
+				<TD><input type="radio" id ="m" name="gender" value="Male">Male
+				<input type="radio"  id ="f" name="gender" value="Female">Female</TD>
+			</TR>
+			<TR>
+				<TD>Address : </TD>
+				<TD><TextArea name="address" rows=5 columns=20></TextArea></TD>
+			</TR>
+			<TR>
+				<TD>Skills : </TD>
+				<TD><input type="checkbox" name="skill" value="c#" id="c">C#
+				<input type="checkbox" name="skill" value="java" id="j">Java
+				<input type="checkbox" name="skill" value="html" id="h">HTML
+				</TD>
+			</TR>
+			
+			<TR>
+				<TD>City: </TD>
+				<TD><select name="city">
+					<option value="Nashik">Nashik</option>
+					<option value="Mumbai" selected>Mumbai</option>
+					<option value="Nagpur">Nagpur</option>
+				</select></TD>
+			</TR>
+			<TR>
+				<TD>State: </TD>
+				<TD><select name = "state" multiple>
+					<option value="Maharashtra">Maharashtra</option>
+					<option value="Kerala" selected>Kerala</option>
+					<option value="Karnataka">Karnataka</option>
+				</select></TD>
+			</TR>
+			<TR>
+				<TD><input type="button" onclick="myData();" value="Submit"></TD>
+				<TD><input type="button" value="Get" onclick="GetData();"></TD>
+			</TR>
+		</table>
+		</form>
+	</center>
+	</Body>
+</Html>

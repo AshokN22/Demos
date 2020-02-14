@@ -1,0 +1,22 @@
+<Html>
+	<Head><Title>Second Javascript Demo</Title>
+		<script>
+			function goBack(){
+				window.history.back();
+			}
+			function goForward(){
+				window.history.forward();
+			}
+		</script>
+	</Head>
+	<Body>
+		<div id="data" name="data"><h1>About<h2></div>
+		<ul>
+			<li><a href="Home.html">Home</a></li>
+			<li>About Us</li>
+			<li><a href="Contact.html">Contact Us</a></li>
+		</ul>
+		<input type="button" value="Back" onclick="goBack();">
+		<input type="button" value="Forward" onclick="goForward();">
+	</Body>
+</Html>

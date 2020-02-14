@@ -1,0 +1,1 @@
+document.write("<BR>External ----- Hello World-----<BR>");

@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+    div {
+            background-color:blanchedalmond;
+            color:chocolate;
+            height:200px;
+            width:400px;
+            margin:5px;
+            display:inline-block;
+            border:3px solid chocolate;
+            border-radius:5px;
+        }
+    </style>
+    <script src="jquery-1.12.0.js"></script>
+
+    
+    <script>
+        $(document).ready(function () {
+		$("#save").click(function(){
+			var fname = $("#fname").val();
+                    	var lname = $("#lname").val();
+			var d = new Date();
+			d.setTime(d.getTime()+(60*1000));
+			var exp = ";expires="+d.toUTCString();
+			document.cookie = "cfname="+fname+exp;
+			document.cookie = "clname="+lname+exp;
+
+		});
+		$("#read").click(function(){
+			alert(document.cookie);
+                    	var cdata = document.cookie.split(";");
+			$("#fname").val(cdata[0].split("=")[1]);
+			$("#lname").val(cdata[1].split("=")[1]);
+		});
+        });
+    </script>
+</head>
+<body>
+    <div id="d1" >
+        <center><h3>Cookies</h3>
+        <table>
+            <tr>
+                <td>First Name : </td>
+                <td> 
+                    <input id="fname" type="text" /></td>
+            </tr>
+            <tr>
+                <td>Last Name : </td>
+                <td> 
+                    <input id="lname" type="text" /></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Save" id="save" /> </td>
+                <td> 
+                    <input type="button" value="Retrieve" id="read" /></td>
+            </tr>
+        </table>
+            </center>
+    </div>
+    </div>
+</body>
+</html>

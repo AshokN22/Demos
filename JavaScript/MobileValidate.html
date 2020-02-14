@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Cookie</title>
+		<script>
+			function validate(){
+				var s = document.getElementById("mobile").value;
+				var e = document.getElementById("email").value;
+				if(s.length == 0){
+					alert("Please Enter Mobile Number");
+				}else{
+					var p = new RegExp("[+]\\d{2}[ ]\\d{10}");
+					var ep = new RegExp("[^0-9][\\w\\d]*[@]\\w+[.][a-z]{3}");
+					if(ep.test(e)){
+						alert("Valid");
+					}else{
+						alert("InValid");
+					}
+				}
+			}
+		</script>
+	</head>
+	<Body>
+		<BR><BR>
+		Please Enter Mobile No. : <input type="text" name="mobile">
+		<br>Please Enter Email ID. : <input type="text" name="email">
+		<br>
+		<input type="button" value="Submit" onclick = "validate();"/>
+	</Body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Figure Demo</title>
+		<script>
+			function Demo(){
+				alert(document.getElementById("name").value);
+			}
+		</script>
+	</head>
+	<body>
+		<form method="POST" action="Demo.asp">
+			Perform Something : <input type="text" pattern="[a-z]{5,15}" required placeholder="Enter Something" title="Invalid Data" id="name">
+			<input type="submit" value="Click" id="btn">
+		</form>
+	</body>
+</html>

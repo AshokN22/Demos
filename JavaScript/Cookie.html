@@ -1,0 +1,39 @@
+<html>
+	<head><title>Modular Javascript</title>
+		<script>
+			function createCookie(){
+				var user = document.getElementById("uname").value;
+				var pwd = document.getElementById("passwd").value;
+				document.cookie = "uname="+user;
+				document.cookie = "pass="+pwd;
+			}
+
+			function getCookie(){
+				var data = document.cookie;
+				var ck = data.split(";");
+				for(var i = 0;i<ck.length;i++){
+					alert(ck[i]);
+				}
+			}			
+		</script>
+	</head>
+	<body>
+		<BR><BR>
+		<Center><H1>Login<H1>
+			<table>
+				<tr>
+					<td>User Name : </td>
+					<td><input type = "text" name="uname"></td>	
+				</tr>
+				<tr>
+					<td>Password : </td>
+					<td><input type = "text" name="passwd"></td>	
+				</tr>
+				<tr>
+					<td><input type = "button" value="Store" onclick="createCookie();"></td>
+					<td><input type = "button" value="View" onclick="getCookie();"></td>	
+				</tr>
+			</table>
+		</Center>
+	</body>
+</html>

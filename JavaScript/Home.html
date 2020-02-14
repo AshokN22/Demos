@@ -1,0 +1,30 @@
+<Html>
+	<Head><Title>First Javascript Demo</Title>
+		<script>
+			function goBack(){
+				window.history.back();
+			}
+			function goForward(){
+				window.history.forward();
+			}
+
+			function closeTab(){
+				var status = confirm("Do you want to Close Window")
+				if(status){
+					window.close();
+				}
+			}
+		</script>
+	</Head>
+	<Body>
+		<div id="data" name="data"><h1>Home<h2></div>
+		<ul>
+			<li>Home</li>
+			<li><a href="About.html">About Us</a></li>
+			<li><a href="Contact.html">Contact Us</a></li>
+		</ul>
+		<input type="button" value="BACK" onclick="goBack()">
+		<input type="button" value="Forward" onclick="goForward();">
+		<input type="button" value="Close" onclick="closeTab();">
+	</Body>
+</Html>

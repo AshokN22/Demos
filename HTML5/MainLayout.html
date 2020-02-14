@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html manifest="DATACache.appcache">
+<head>
+    <title>Home</title>
+    <link href="Layout.css" rel="stylesheet" />
+    <script>
+        window.addEventListener("load", function (e) {
+            window.applicationCache.addEventListener("updateready", function (e) {
+                if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+                    window.applicationCache.swapCache();
+                    if (confirm("Update ready......")) {
+                        window.location.reload();
+                    }
+                }
+                else {
+                    alert("No Update");
+                }
+            }, false);
+        }, false);
+    </script>
+</head>
+<body>
+    <div id = "main_wrapper">
+     <header id="top_header">
+         Welcome to School Management System.
+     </header>
+    <nav id="top_menu">
+        <ul>
+             <li>Home</li>
+             <li>About Us</li>
+             <li>Contact Us</li>
+         </ul>
+    </nav>
+    <h1 id="main_title">Home</h1>
+    <section id="main_section">
+        <article>
+            <header>
+                <hgroup>
+                    <h1>Title of article 1</h1>
+                    <h2>Sub title for article 1</h2>
+                </hgroup>
+            </header>
+            <p>
+                Some article.Some article.Some article.Some article.Some article.Some article.Some article.Some article.
+                Some article.Some article.Some article.Some article.Some article.Some article.Some article.Some article.
+                Some article.Some article.Some article.Some article.Some article.Some article.Some article.Some article.
+                Some article.Some article.Some article.Some article.Some article.Some article.Some article.Some article.
+                Some article.Some article.Some article.Some article.Some article.Some article.Some article.Some article.
+                Some article.Some article.Some article.Some article.Some article.Some article.Some article.Some article.
+                Some article.Some article.Some article.Some article.Some article.Some article.Some article.Some article.
+            </p>
+            <footer>...Written by author name.</footer>
+        </article>
+        <article>
+            <header>
+                <hgroup>
+                    <h1>Title of article 2</h1>
+                    <h2>Sub title for article 2</h2>
+                </hgroup>
+            </header>
+            <p>
+                Some article.Some article.Some article.Some article.Some article.Some article.Some article.Some article.
+                Some article.Some article.Some article.Some article.Some article.Some article.Some article.Some article.
+                Some article.Some article.Some article.Some article.Some article.Some article.Some article.Some article.
+                Some article.Some article.Some article.Some article.Some article.Some article.Some article.Some article.
+                Some article.Some article.Some article.Some article.Some article.Some article.Some article.Some article.
+                Some article.Some article.Some article.Some article.Some article.Some article.Some article.Some article.
+                Some article.Some article.Some article.Some article.Some article.Some article.Some article.Some article.
+            </p>
+            <footer>...Written by author name.</footer>
+        </article>
+    </section>
+
+    <aside id="side_notification">
+        <header>
+            <h1>Notifications</h1>
+       </header>
+            <ul>
+                <li>Notification 1.</li>
+                <li>Notification 2.</li>
+                <li>Notification 3.</li>
+                <li>Notification 4.</li>
+                <li>Notification 5.</li>
+            </ul>
+        
+    </aside>
+
+    <footer id="footer">
+        The site is maintained by Webmaster Ashok Nishad
+    </footer>
+    </div>
+</body>
+</html>

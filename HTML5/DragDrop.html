@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>First Demo 123</title>
+		<script language="javascript">
+			function allowDrop(ev) {
+	            			ev.preventDefault();
+        			}
+
+        			function Drop(ev) {
+            				//ev.preventDefault();
+           				 var eid = ev.dataTransfer.getData("image");
+           				ev.target.appendChild(document.getElementById(eid));
+        			}
+
+        			function Drag(ev) {
+            				ev.dataTransfer.setData("image",ev.target.id);
+        			}		
+		</script>
+		<style>
+			
+			#maindiv div{
+				height : 200px;
+				width:300px;
+				border : 2px solid black;
+				border-radius : 10px;
+				background-color:aqua;
+				display:block;
+				margin:20px;
+			}
+			#maindiv div img{
+				height : 150px;
+				width:250px;
+				border : 2px solid black;
+				border-radius : 10px;
+				margin:20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="maindiv">
+			<div  ondrop="Drop(event)" ondragover="allowDrop(event)">
+				<img id="img123" src="bird.jpg" draggable="true" ondragstart="Drag(event)" >
+			</div>
+			<div ondrop="Drop(event)" ondragover="allowDrop(event)">
+
+			</div>
+		</div>
+
+	</body>	
+</html>

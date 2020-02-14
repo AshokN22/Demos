@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Web Worker Demo</title>
+		<script>
+			var w;
+			function start(){
+				if(typeof(Worker) !== "undefined"){
+					if(typeof(w) == "undefined"){
+						w = new Worker("WebWork.js");
+					}
+					w.onmessage = function(e){
+						document.getElementById("result").innerHTML = e.data;
+					}
+				}
+			}
+			function stop(){
+				w.terminate();
+				w = undefined;
+			}
+		</script>
+	</head>
+	<body>
+		<div id="result"></div><br>
+		<input type="button" value="start" onClick="start()">
+		<input type="button" value="stop" onClick="stop()">
+	</body>
+</html>
